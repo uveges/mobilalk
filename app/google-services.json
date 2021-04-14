@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "537140666843",
+    "project_id": "salesmanagement-225ce",
+    "storage_bucket": "salesmanagement-225ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537140666843:android:e5ba8d2aac13e5ab8cc7fe",
+        "android_client_info": {
+          "package_name": "com.example.sales_management2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537140666843-h0i4dujhqdrccpk0v4gqja5pai2sk3kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sales_management2",
+            "certificate_hash": "26e04ed6fef99f526a46238d1c228e19ea6e573c"
+          }
+        },
+        {
+          "client_id": "537140666843-flsl2ra8a55rlp9quvn922aavrb57q8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9Q-M8aSDdTErMJR6yrZA-h5r5aaMTG1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537140666843-flsl2ra8a55rlp9quvn922aavrb57q8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

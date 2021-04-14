@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!--private String id;                                  //auto-generált
+        private String href;
+        private LocalDateTime creationDate;                 //auto-generált: rögzítés ideje
+        private String description;
+        private String name;
+        private String rating;
+        private LocalDateTime referredDate;
+        private LocalDateTime statusChangedDate;            //kezdetben: a létrehozás ideje
+        private String statusChangeReason;                  //kezdetben: null
+        private String type;
+        private Currency estimatedRevenue;
+        private SalesLeadPriority salesLeadPriorityType;    //prioritás: automatikusan alacsony
+        private SalesLeadState salesLeadStateType;          //automatán: inProgress
+        private LocalTime validFor;                         //auto-generált - 3 napig valid-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_row"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/main_title_add_item"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="______Új Lead rögzítése_____"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/href_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_row"
+            android:padding="8dp"
+            android:text="Href:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/href_create"
+            android:hint="http://example.com"
+            android:inputType="text"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/href_textview"
+            />
+
+        <TextView
+            android:id="@+id/description_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Leírás:"
+            android:layout_below="@+id/href_create"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_create"
+            android:inputType="text"
+            android:hint="Egyedi leírás a Lead-hez."
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/description_textview"
+            />
+
+        <TextView
+            android:id="@+id/name_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Elnevezés:"
+            android:layout_below="@+id/description_create"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_create"
+            android:inputType="text"
+            android:hint="A Lead elnevezése."
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/name_textview"
+            />
+
+        <TextView
+            android:id="@+id/rating_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Értékelés:"
+            android:layout_below="@+id/name_create"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_create"
+            android:inputType="text"
+            android:hint="Megvalósulási potenciál?"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/rating_textview"
+            />
+
+        <TextView
+            android:id="@+id/referredDate_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Megbeszélés ideje:"
+            android:layout_below="@+id/rating_create"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/referredDate_create"
+            android:inputType="datetime"
+            android:hint="YYYY-DD-MM HH:MM"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/referredDate_textview"
+            />
+
+        <TextView
+            android:id="@+id/type_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Jelleg/típus:"
+            android:layout_below="@+id/referredDate_create"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_create"
+            android:inputType="text"
+            android:hint="Milyen jellegű az adott Lead?"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/type_textview"
+            />
+
+        <TextView
+            android:id="@+id/estimatedRevenue_textview"
+            style="@style/ItemDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Becsült piaci érték (HUF):"
+            android:layout_below="@+id/type_create"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/estimatedRevenue_create"
+            android:inputType="text"
+            android:hint="10000"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/estimatedRevenue_textview"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/estimatedRevenue_textview"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/vissza_mainActivityre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="25dp"
+                android:onClick="vissza_mainActivityre"
+                android:text="Vissza" />
+
+            <Button
+                android:id="@+id/rogzites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:onClick="rogzit"
+                android:text="Rögzítés" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+

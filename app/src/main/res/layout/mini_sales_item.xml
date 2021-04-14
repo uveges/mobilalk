@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <!--
+    private String id;
+    private LocalDateTime creationDate;
+    private SalesLeadPriority salesLeadPriorityType;
+    private String type;
+    private Currency estimatedRevenue;
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/background_blue">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Lead fontosabb adatai:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:id="@+id/nulladik"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nulladik"
+            android:id="@+id/elso">
+
+            <TextView
+                android:id="@+id/LeadIDszoveg"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Lead ID:                          "
+                android:textStyle="bold"
+                android:textColor="?android:textColorSecondary" />
+
+            <TextView
+                android:id="@+id/LeadID"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/lead_id"
+                android:textColor="?android:textColorSecondary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/elso"
+            android:id="@+id/masodik">
+
+            <TextView
+                android:id="@+id/creationDateSzoveg"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Létrehozva:                   "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/creationDate"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="created" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/harmadik"
+            android:layout_below="@+id/masodik">
+
+            <TextView
+                android:id="@+id/salesLeadPrioritySZoveg"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Prioritás:                        "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/salesLeadPriority"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/priority" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/negyedik"
+            android:layout_below="@+id/harmadik">
+
+            <TextView
+                android:id="@+id/typeSzoveg"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Típus:                              "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/type"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/type" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/otodik"
+            android:layout_below="@+id/negyedik">
+
+            <TextView
+                android:id="@+id/estimatedRevenueSzoveg"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/type"
+                android:padding="8dp"
+                android:text="Tervezett megtérülés:"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/estimatedRevenue"
+                style="@style/ItemDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/type"
+                android:padding="8dp"
+                android:text="@string/estimatedrevenue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otodik"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/reszletek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="reszletek"
+                android:text="@string/reszletek" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

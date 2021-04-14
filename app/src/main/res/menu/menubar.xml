@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/kereses"
+        android:title="Kereses"
+        android:icon="@drawable/ic_kereses"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/hozzaadas"
+        android:title="Hozzaadas"
+        android:icon="@drawable/ic_hozzaadas"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/kilepes"
+        android:title="Kilepes"
+        android:icon="@drawable/ic_kilepes"
+        app:showAsAction="always"
+        />
+</menu>

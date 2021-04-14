@@ -1,0 +1,460 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- https://www.techrepublic.com/article/pro-tip-save-hours-of-frustration-with-this-android-tablelayout-s-->
+
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/reszletes_torol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="lead_torlese"
+            android:text="Lead törlése"
+            android:layout_column="2"
+            android:layout_weight="0.4"/>
+
+        <Button
+            android:id="@+id/visszsa_gomb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="ugras_mainactre"
+            android:text="Vissza"
+            android:layout_weight="0.4"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/id_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID: "
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/id_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:weightSum="5"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/href_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Href: "
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/href_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="href"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/href_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Új érték?"
+
+            android:inputType="text"
+            android:layout_column="2"
+            android:layout_weight="0.6"/>
+
+        <Button
+            android:id="@+id/href_modosit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="modosit_href"
+            android:text="Módosít"
+            android:layout_column="3"
+            android:layout_weight="0.1"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:weightSum="5"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/creationDate_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:text="Létrehozva: "
+            android:textSize="20dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:weightSum="7"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/creationDate_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="creationDate"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/background_blue"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/description_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leírás: "
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/description_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Új érték?"
+            android:inputType="text"
+            android:layout_column="2"
+            android:layout_weight="0.6"/>
+
+        <Button
+            android:id="@+id/description_modosit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="modosit_description"
+            android:text="Módosít"
+            android:layout_column="3"
+            android:layout_weight="0.1"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:weightSum="5"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/name_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Név:: "
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/name_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Új érték?"
+            android:inputType="text"
+            android:layout_column="2"
+            android:layout_weight="0.6"/>
+
+        <Button
+            android:id="@+id/name_modosit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="modosit_name"
+            android:text="Módosít"
+            android:layout_column="3"
+            android:layout_weight="0.1"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:weightSum="5"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/rating_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Értékelés: "
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/rating_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Új érték?"
+            android:inputType="text"
+            android:layout_column="2"
+            android:layout_weight="0.6"/>
+
+        <Button
+            android:id="@+id/rating_modosit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="modosit_rating"
+            android:text="Módosít"
+            android:layout_column="3"
+            android:layout_weight="0.1"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:weightSum="5"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/referredDate_row"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:text="Érvényesség: "
+            android:textSize="20dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/referredDate_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ReferredDate"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/referredDate_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Új érték?"
+            android:inputType="text"
+            android:layout_column="2"
+            android:layout_weight="0.6"/>
+
+        <Button
+            android:id="@+id/referredDate_modosit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="modosit_referredDate"
+            android:text="Módosít"
+            android:layout_column="3"
+            android:layout_weight="0.1"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_blue"
+        android:weightSum="5"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/estimatedRevenue_row"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:text="Megtérülés: "
+            android:textSize="20dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/estimatedRevenue_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="estimated"
+            android:textSize="20dp"
+            android:layout_column="1"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/estimatedRevenue_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Új érték?"
+            android:inputType="text"
+            android:layout_column="2"
+            android:layout_weight="0.6"/>
+
+        <Button
+            android:id="@+id/estimatedRevenue_modosit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_margin="5dp"
+            android:layout_weight="0.1"
+            android:onClick="modosit_estimatedRevenue"
+            android:text="Módosít" />
+
+    </TableRow>
+
+</TableLayout>
+
+</ScrollView>

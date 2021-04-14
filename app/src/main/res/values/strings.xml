@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sales_Management2</string>
+    <string name="username"><i>Felhasználónév</i></string>
+    <string name="password"><i>Jelszó</i></string>
+    <string name="login">Bejelentkezés</string>
+    <string name="login_screen_image">login_screen_image</string>
+    <string name="reszletek">Részletek</string>
+    <string name="creationdate">creationDate</string>
+    <string name="lead_id">Lead ID</string>
+    <string name="priority">Priority</string>
+    <string name="type">type</string>
+    <string name="estimatedrevenue">estimatedRevenue</string>
+    <string name="delete">Törlés</string>
+    <string name="modify">Módosítás</string>
+</resources>
